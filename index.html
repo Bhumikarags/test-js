@@ -1,0 +1,341 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="main" id="main">
+         <div class="indiv">
+            <h2 id="ques">Question</h2>
+            <ul>
+                <li>
+
+
+
+                  <input type="radio" id="a" name="ans" class="ans">
+                  <label for="a" id="a_text">answer</label>
+                </li>
+                <li>
+                    <input type="radio" id="b" name="ans" class="ans">
+                    <label for="b" id="b_text">answer</label>
+                 </li>
+                <li>
+                    <input type="radio" id="c" name="ans" class="ans">
+                    <label for="c" id="c_text">answer</label>
+                 </li>
+                <li>
+                    <input type="radio" id="d" name="ans" class="ans">
+                    <label for="d" id="d_text">answer</label>
+               </li>
+            </ul>
+            <button id="submit">submit</button>
+         </div>
+        </div>  
+    </section>  -->
+
+    
+    <!-- -------------------------- -->
+<!-- <script type="text/javascript">
+      
+   const data=[
+   
+   {
+        question: "What is the most used programming language in 2019?",
+        a: "Java",
+        b: "C",
+        c: "Python",
+        d: "JavaScript",
+        correct: "d",
+    },
+    {
+        question: "Who is the President of US?",
+        a: "Florin Pop",
+        b: "Donald Trump",
+        c: "Ivan Saldano",
+        d: "Mihai Andrei",
+        correct: "b",
+    },
+    {
+        question: "What does HTML stand for?",
+        a: "Hypertext Markup Language",
+        b: "Cascading Style Sheet",
+        c: "Jason Object Notation",
+        d: "Helicopters Terminals Motorboats",
+        correct: "a",
+    },
+    {
+        question: "What year was JavaScript launched?",
+        a: "1996",
+        b: "1995",
+        c: "1994",
+        d: "none of the above",
+        correct: "b",
+    },
+    {
+        question: "What is full form of www?",
+        a: "Word Web World",
+        b: "World Wide Web",
+        c: "World Wight Web",
+        d: "none of the above",
+        correct: "b",
+    },
+    {
+        question: "What is the full form of css",
+        a: "cascading script sheet",
+        b: "cascading html script",
+        c: "cascading style sheet",
+        d: "none of the above",
+        correct: "c", 
+    }
+   ];
+   
+    const main=document.getElementById("main");
+  
+    const ques=document.getElementById("ques");
+
+    const answers=document.querySelectorAll(".ans")
+  
+    const a_text=document.getElementById("a_text");
+    const b_text=document.getElementById("b_text");
+    const c_text=document.getElementById("c_text");
+    const d_text=document.getElementById("d_text");
+
+ const submitbtn = document.getElementById("submit");
+   
+ let score=0;
+ let currentQuiz=0;
+
+ load();
+
+  
+ function load()
+ {
+     
+     deselectall();
+     console.log("hekko");
+     const currentdata= data[currentQuiz];
+     ques.innerText=currentdata.question;
+     a_text.innerText=currentdata.a;
+     b_text.innerText=currentdata.b;
+     c_text.innerText=currentdata.c;
+     d_text.innerText=currentdata.d;
+
+}
+
+
+ function select(){
+    let answer =undefined;
+    answers.forEach((e)=>{
+        if(e.checked){
+            answer=e.id;
+        }
+
+    });
+    return answer;
+
+ }
+
+function deselectall()
+{
+     console.log(answers)
+    answers.forEach(x => {
+
+       x.checked= false;    
+    });
+}
+
+submitbtn.addEventListener("click",()=>{
+    const answer= select();
+   
+    if(answer){
+        if(answer===data[currentQuiz].correct){
+            score++;
+        }
+        currentQuiz++;
+
+        if(currentQuiz<data.length){
+            load();
+        }
+        else{
+          main.innerHTML = `
+                <h2>You answered correctly at ${score}/${data.length} questions.</h2>
+                
+                <button onclick="location.reload()">Reload</button>
+            `;   
+        }
+
+
+    }
+
+
+})
+   
+    </script>
+</body>
+</html>
+ -->
+<!-- ---------------------------------- -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <section>
+       <div class="main" id="main">
+           <div class="in">
+             <h2 id="question">Question</h2>  
+            <ul>
+                <li>
+                    <input type="radio" class="ans" id="a" name="ans">
+                    <label for="a" id="a_text" > answer</label>
+                </li>
+                <li>
+                    <input type="radio" class="ans" id="b" name="ans">
+                    <label for="b" id="b_text" > answer</label>
+                </li>
+                <li>
+                    <input type="radio" class="ans" id="c" name="ans">
+                    <label for="c" id="c_text" > answer</label>
+                </li>
+                <li>
+                    <input type="radio" class="ans" id="d" name="ans">
+                    <label for="d" id="d_text" > answer</label>
+                </li>
+            </ul>
+            <button id="submit">submit</button>
+           </div>
+       </div>
+   </section> 
+   <!-- ----------------------- -->
+   <script type="text/javascript">
+        const data=[
+        {
+        question: "What is the most used programming language in 2019?",
+        a: "Java",
+        b: "C",
+        c: "Python",
+        d: "JavaScript",
+        correct: "d",
+    },
+    {
+        question: "Who is the President of US?",
+        a: "Florin Pop",
+        b: "Donald Trump",
+        c: "Ivan Saldano",
+        d: "Mihai Andrei",
+        correct: "b",
+    },
+    {
+        question: "What does HTML stand for?",
+        a: "Hypertext Markup Language",
+        b: "Cascading Style Sheet",
+        c: "Jason Object Notation",
+        d: "Helicopters Terminals Motorboats",
+        correct: "a",
+    },
+    {
+        question: "What year was JavaScript launched?",
+        a: "1996",
+        b: "1995",
+        c: "1994",
+        d: "none of the above",
+        correct: "b",
+    },
+    {
+        question: "What is full form of www?",
+        a: "Word Web World",
+        b: "World Wide Web",
+        c: "World Wight Web",
+        d: "none of the above",
+        correct: "b",
+    },
+    {
+        question: "What is the full form of css",
+        a: "cascading script sheet",
+        b: "cascading html script",
+        c: "cascading style sheet",
+        d: "none of the above",
+        correct: "c", 
+    }  
+ ] ;
+ const main=document.getElementById("main");
+ const questions =document.getElementById("question");
+ const answers=document.querySelectorAll(".ans");
+ const a_text=document.getElementById("a_text");    
+ const b_text=document.getElementById("b_text");
+ const c_text=document.getElementById("c_text");
+ const d_text=document.getElementById("d_text");
+ const submit=document.getElementById("submit");
+
+ let score=0;
+ let current=0;
+ load();
+
+
+
+ function load(){
+    diselect();
+  const currentdata=data[current];
+  console.log(currentdata);
+  questions.innerText=currentdata.question;
+  a_text.innerText=currentdata.a;  
+  b_text.innerText=currentdata.b;  
+  c_text.innerText=currentdata.c;  
+  d_text.innerText=currentdata.d;  
+   
+ }
+
+
+ function select()
+ {
+      let ans=undefined;
+      answers.forEach((e)=>{
+        if(e.checked){
+            ans=e.id;
+        }
+
+      })
+      return ans;
+    
+ }
+   
+ submit.addEventListener("click",()=>{
+       const ans=select();
+       if(ans===data[current].correct){
+        score++;
+       
+       }
+       current++;
+       if(current<data.length){
+        load();
+       }
+       else{
+        main.innerHTML=`<h1>you answered correctly ${score}/${data.length}</h1>
+      <button onclick="location.reload()"> reload </button>
+      `
+       }
+   })
+   
+
+
+function diselect(){
+     answers.forEach(x => {
+        x.checked=false;
+     });
+ }
+
+   </script>
+   
+</body>
+</html>
